@@ -77,7 +77,6 @@ public class RequestParamController {
     @ResponseBody
     @RequestMapping("/request-param-map")
     public String requestParamMAp(@RequestParam Map<String,Object> paramMap) {
-        //default가 들어가면 굳이 required는 필요가 없다 있든없든 대체값이 들어가기 때문에
         log.info("username={}, age={}", paramMap.get("username"), paramMap.get("age"));
         return "OK";
 
